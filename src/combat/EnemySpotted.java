@@ -1,3 +1,5 @@
+package combat;
+
 import com.runemate.game.api.hybrid.entities.Npc;
 import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.queries.results.LocatableEntityQueryResults;
@@ -11,7 +13,7 @@ public class EnemySpotted extends BranchTask {
     private final int maxRadius;
     private Npc target;
 
-    EnemySpotted(final Coordinate startPosition, final int maxRadius) {
+    public EnemySpotted(final Coordinate startPosition, final int maxRadius) {
         this.startPosition = startPosition;
         this.maxRadius = maxRadius;
     }

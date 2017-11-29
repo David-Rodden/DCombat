@@ -21,7 +21,7 @@ public class CheckCombatStatus extends BranchTask {
      */
     @Override
     public TreeTask successTask() {
-        return target == null ? parent : null;
+        return !target.isValid() ? parent : null;
     }
 
     /**

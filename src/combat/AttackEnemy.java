@@ -10,7 +10,7 @@ public class AttackEnemy extends BranchTask {
     private final Npc target;
     private final BranchTask parent;
 
-    public AttackEnemy(final BranchTask parent, final Npc target) {
+    AttackEnemy(final BranchTask parent, final Npc target) {
         this.parent = parent;
         this.target = target;
     }

@@ -9,7 +9,7 @@ public class EatFood extends LeafTask {
      */
     @Override
     public void execute() {
-        if (Inventory.contains("Placeholder"))
-            Inventory.getItems("Placeholder").first().interact("Eat");
+        if (Inventory.contains(""))
+            Inventory.getItems("").first().interact("Eat");
     }
 }
