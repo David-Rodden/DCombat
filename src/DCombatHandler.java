@@ -4,7 +4,6 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
 import combat.EnemySpotted;
 
 public class DCombatHandler extends TreeBot {
-    public static final String DEFAULT_FOOD = "Shrimp";
 
     /**
      * Set the base coordinates to the player's start location

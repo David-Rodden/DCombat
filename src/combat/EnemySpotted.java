@@ -6,9 +6,9 @@ import com.runemate.game.api.hybrid.queries.results.LocatableEntityQueryResults;
 import com.runemate.game.api.hybrid.region.Npcs;
 import com.runemate.game.api.script.framework.tree.BranchTask;
 import com.runemate.game.api.script.framework.tree.TreeTask;
-import combat.AttackEnemy;
 
 public class EnemySpotted extends BranchTask {
+    public static final int SHORT_SLEEP = 1000, LONG_SLEEP = 4000;
     private final Coordinate startPosition;
     private final int maxRadius;
     private Npc target;

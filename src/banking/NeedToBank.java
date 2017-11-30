@@ -18,6 +18,6 @@ public class NeedToBank extends BranchTask {
 
     @Override
     public boolean validate() {
-        return Players.getLocal().getHealthGauge().getPercent() < 50 && Inventory.contains("");
+        return Players.getLocal().getHealthGauge().getPercent() < 50 && Inventory.contains("Shrimp");
     }
 }
