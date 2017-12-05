@@ -1,9 +1,18 @@
+import com.runemate.game.api.hybrid.location.Coordinate;
 import com.runemate.game.api.hybrid.region.Players;
 import com.runemate.game.api.script.framework.tree.TreeBot;
 import com.runemate.game.api.script.framework.tree.TreeTask;
 import combat.EnemySpotted;
+import location.InEnemyLocation;
 
 public class DCombatHandler extends TreeBot {
+
+
+    @Override
+    public void onStart(final String... $) {
+        // set start position player
+        super.onStart($);
+    }
 
     /**
      * Set the base coordinates to the player's start location
@@ -13,6 +22,7 @@ public class DCombatHandler extends TreeBot {
      */
     @Override
     public TreeTask createRootTask() {
-        return new EnemySpotted(Players.getLocal().getPosition(), 15);
+        // must set with the location in which enemies are defined
+        return new InEnemyLocation(null);
     }
 }
