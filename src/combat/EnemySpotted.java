@@ -10,10 +10,12 @@ import com.runemate.game.api.script.framework.tree.TreeTask;
 
 public class EnemySpotted extends BranchTask {
     public static final int SHORT_SLEEP = 1000, LONG_SLEEP = 4000;
+    private final BranchTask parent;
     private final Area enemyLocation;
     private Npc target;
 
-    public EnemySpotted(final Area enemyLocation) {
+    public EnemySpotted(final BranchTask parent, final Area enemyLocation) {
+        this.parent = parent;
         this.enemyLocation = enemyLocation;
     }
 
@@ -24,7 +26,7 @@ public class EnemySpotted extends BranchTask {
 
     @Override
     public TreeTask failureTask() {
-        return null;
+        return parent;
     }
 
     @Override
